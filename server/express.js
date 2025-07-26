@@ -21,12 +21,6 @@ app.use(bodyParser.json());
 app.get("/",(req,res)=>{
     res.send("hello");
 });
-app.get("/n",(req,res)=>{
-    res.send("nechami");
-});
-app.get("/m",(req,res)=>{
-    res.send("miri");
-});
 app.use("/users",users);
 app.use("/dress",dress);
 
