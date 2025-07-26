@@ -1,0 +1,113 @@
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    min-width: 450px;
+    max-width: 1000px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #1bde86;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #1bde86;
+    background-color: #ffffff;
+} */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* רקע עדין ונקי לדף */
+}
+
+.container {
+    padding: 20px;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto; /* תיקון מרווח מהניווט בראש העמוד */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* צל עדין לקונטיינר */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #333; /* צבע טקסט בהיר יותר לתוויות */
+    text-align: right;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc; /* גבול לשדות הקלט */
+    border-radius: 4px; /* קיבוע עגלגל לשדות הקלט */
+}
+
+button {
+    padding: 10px;
+    background-color: #333; /* כפתור בצבע תואם לניווט */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* עיצוב כפתור ההרשמה */
+}
+
+button:hover {
+    background-color: #555; /* אפקט העכבר לכפתור */
+}
+
+h1{
+    text-align: center;
+}
+
+/* header{
+    margin-bottom: 8px;
+} */

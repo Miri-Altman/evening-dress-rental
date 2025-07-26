@@ -1,0 +1,36 @@
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgb(60, 42, 34);
+    font-family: Arial, sans-serif;
+}
+
+main h1 {
+    font-size: 2rem;
+    color: rgb(165, 120, 42);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    main p {
+        font-size: 1.1rem;
+    }
+}

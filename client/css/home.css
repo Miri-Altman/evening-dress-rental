@@ -1,0 +1,380 @@
+
+body {
+    background-color: rgb(238, 228, 215);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: normal;
+    transition: font-weight 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a:active {
+    font-weight: bold;
+    color: rgb(165, 120, 42);
+}
+
+nav a.current {
+    font-weight: bold;
+}
+
+.wellcome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+#userName {
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+#logout,#updateUser ,#myDress{
+    padding: 5px 15px;
+    color: rgb(165, 120, 42);
+    background-color: rgb(223, 196, 163);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+#logout:hover,#updateUser:hover, #myDress:hover {
+    background-color: rgb(223, 196, 163);
+    transform: translateY(-2px);
+}
+
+#logout:active ,#updateUser:active, #myDress:active{
+    background-color: rgb(125, 80, 12);
+    transform: translateY(0);
+}
+
+nav a.active {
+    font-weight: bold;
+    color: rgb(165, 120, 42);
+    border-top: 2px solid rgb(165, 120, 42);
+    border-bottom: 2px solid rgb(165, 120, 42);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    .wellcome {
+        margin-top: 15px;
+    }
+}
+
+main {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.sort {
+    background-color: rgb(223, 196, 163);
+    flex: 1;
+    padding: 10px;
+    color: rgb(165, 120, 42);
+    margin-left: 20px;
+}
+
+.dress-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 3;
+}
+
+.dress-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    max-height: 650px;
+}
+
+.dress-card img {
+    width: 100%;
+    height: auto;
+}
+
+.dress-details {
+    padding: 10px;
+    color: rgb(165, 120, 42);
+    font-size: 0.9rem;
+}
+
+.dress-details p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .dress-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .dress-container {
+        grid-template-columns: 1fr;
+    }
+}
+.dress-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer; 
+    transition: transform 0.3s;
+    border: 1px solid rgb(165, 120, 42);
+}
+
+.dress-card:hover {
+    transform: scale(1.02); 
+}
+.dress-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer; 
+    transition: transform 0.3s;
+}
+
+.dress-card:hover {
+    transform: scale(1.02); 
+}
+.color-selection {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: border 0.3s ease;
+}
+
+.color-option:hover {
+    border: 2px solid black;
+}
+
+.color-option:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.color-option.selected {
+    border: 2px solid black;
+}
+
+
+.price-selection {
+    margin: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    padding: 10px;
+    color: rgb(165, 120, 42);
+    font-size: 0.9rem;
+}
+
+.size-options table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.size-options td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.size-options input {
+    width: 60px;
+    text-align: center;
+}
+
+.image-upload {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(223, 196, 163);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: rgb(203, 176, 143);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: rgb(183, 156, 123);
+    transform: translateY(0);
+}
+.size{
+    display: flex;
+    /* margin: 3px; */
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+.chooseSize{
+    height: 15px;
+    max-width: 35px;
+    margin-right: 4px;
+    font-size: smaller;
+    /* width: 25px; */
+}
+.whichSize{
+    font-size: medium;    
+    width: 20px;
+    text-align: center;
+    margin-right: 2px;
+}
+
+.size-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.size-column {
+    flex: 1;
+    /* margin: 0 2px; */
+}
+.rating {
+    display: flex;
+    direction: rtl; /* הראה את הכוכבים בסדר הפוך מימין לשמאל */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.star {
+    color: gray; /* צבע ברירת המחדל */
+    transition: color 0.3s; /* אנימציה חלקה בעת שינוי צבע */
+}
+
+.star.selected, .star:hover, .star:hover ~ .star {
+    color: gold; /* צבע של כוכבים שנבחרו או מרחפים מעליהם */
+}
+
+.star.selected {
+    color: gold;
+}
+.sort_button{
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    border-radius: 2px;
+    margin:15px ;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    color:rgb(165, 120, 42) ;
+    border: 1px solid rgb(165, 120, 42);
+}
+.min_max_price{
+    /* display: flex; */
+    margin: 3px;
+}
+.rating {
+    display: flex;
+    direction: rtl;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.star {
+    color: gray; /* Default color */
+    transition: color 0.3s;
+}
+
+.star.selected {
+    color: gold; /* Color for selected stars */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: gold; /* Color on hover */
+}
+select {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+label{
+    font-weight: bold;
+}
+#minPrice, #maxPrice{
+    margin-right: 4px;
+}
+.pages_move{
+    display: flex;
+    margin: 5px;
+    margin-right: 55%;
+}
+#loadMore, #goBack{
+    margin: 5px;
+    border: 1px solid rgb(165, 120, 42);
+    height: 40px;
+
+}

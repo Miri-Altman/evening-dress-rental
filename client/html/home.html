@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evening dress rental</title>
+    <link rel="stylesheet" href="../css/allProject.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../js/allProject.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/homeSort.js"></script>
+</head>
+<body dir="rtl" onload="onload_getDress()">
+    <header>
+        <div>
+            <nav>
+                <a href="../html/home.html" class="active">דף הבית</a>
+                <a href="../html/about.html">אודות</a>
+                <a href="../html/login.html">התחברות</a>
+                <a href="../html/addDress.html">פרסום שמלה</a>
+            </nav>
+            <div class="wellcome">
+                <div id="userName"></div>
+                <button type="submit" onclick="logout(); return false" id="logout">התנתקות</button>
+                <button type="submit" onclick="updateUser(); return false" id="updateUser">עדכון פרטים</button>
+                <button type="submit" onclick="myDress(); return false" id="myDress">השמלות שלי</button>
+                <button type="submit" onclick="getAllUsers(); return false" id="getAllUsers">משתמשים באתר</button>
+            </div>
+        </div>
+        <div class="title">Evening Dress Rental</div>
+    </header>
+    <main>
+        <div class="sort">
+            <div class="color-selection">
+                <label for="color">בחר צבע:</label>
+                <div class="color-options">
+                    <div class="color-option" style="background-color: #FF5733;" title="אדום" onclick="colorClick(this)"></div>
+                    <div class="color-option" style="background-color: #33FF57;" title="ירוק" onclick="colorClick(this)"></div>
+                    <div class="color-option" style="background-color: #3357FF;" title="כחול" onclick="colorClick(this)"></div>
+                    <div class="color-option" style="background-color: #F1C40F;" title="צהוב" onclick="colorClick(this)"></div>
+                    <div class="color-option" style="background-color: #9B59B6;" title="סגול" onclick="colorClick(this)"></div>
+                    <div class="color-option" style="background-color: #1ABC9C;" title="טורקיז" onclick="colorClick(this)"></div>
+                    <div class="color-option" style="background-color: #FF6347;" title="עגבנייה" onclick="colorClick(this)"></div>
+                </div>
+            </div>
+            <button type="submit" class="sort_button" onclick="SortByColor(); return false">מיין</button>            
+            <div class="sort_price">
+                <label for="price">בחר מחיר:</label>
+                <div class="price-selection">
+                    <div class="min_max_price">
+                        <label for="minPrice">מינימום</label>
+                        <input value="100" type="number" id="minPrice" name="minPrice" min="50" max="5000" step="50" required>
+                    </div>
+                    <div class="min_max_price">
+                        <label for="maxPrice">   מקסימום</label>
+                        <input value="100" type="number" id="maxPrice" name="maxPrice" min="50" max="5000" step="50" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="sort_button" onclick="SortByPrice(); return false">מיין</button>           
+            <div class="size-options">
+                <label for="size">בחר מידה:</label>
+                <div class="size-column">
+                    <div class="size">
+                        <h5 class="whichSize">2</h5>
+                        <input class="chooseSize" type="number" id="2" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">4</h5>
+                        <input class="chooseSize" type="number" id="4" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">6</h5>
+                        <input class="chooseSize" type="number" id="6" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">8</h5>
+                        <input class="chooseSize" type="number" id="8" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">10</h5>
+                        <input class="chooseSize" type="number" id="10" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">12</h5>
+                        <input class="chooseSize" type="number" id="12" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">14</h5>
+                        <input class="chooseSize" type="number" id="14" min="0" value="0">
+                    </div>
+                </div>
+                <div class="size-column">
+                    <div class="size">
+                        <h5 class="whichSize">16</h5>
+                        <input class="chooseSize" type="number" id="16" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">18</h5>
+                        <input class="chooseSize" type="number" id="18" min="0" value="0">
+                    </div>                            
+                    <div class="size">
+                        <h5 class="whichSize">20</h5>
+                        <input class="chooseSize" type="number" id="20" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">32</h5>
+                        <input class="chooseSize" type="number" id="32" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">34</h5>
+                        <input class="chooseSize" type="number" id="34" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">36</h5>
+                        <input class="chooseSize" type="number" id="36" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">38</h5>
+                        <input class="chooseSize" type="number" id="38" min="0" value="0">
+                    </div>
+                </div>
+                <div class="size-column">
+                    <div class="size">
+                        <h5 class="whichSize">40</h5>
+                        <input class="chooseSize" type="number" id="40" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">42</h5>
+                        <input class="chooseSize" type="number" id="42" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">44</h5>
+                        <input class="chooseSize" type="number" id="44" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">46</h5>
+                        <input class="chooseSize" type="number" id="46" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">48</h5>
+                        <input class="chooseSize" type="number" id="48" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">50</h5>
+                        <input class="chooseSize" type="number" id="50" min="0" value="0">
+                    </div>
+                    <div class="size">
+                        <h5 class="whichSize">52</h5>
+                        <input class="chooseSize" type="number" id="52" min="0" value="0">
+                    </div>
+                </div>                
+            </div>
+            <button type="submit" class="sort_button" onclick="SortBySize(); return false">מיין</button>
+            <div class="city">
+                <label>בחר עיר</label>
+                <div id="citySelect">
+                    <input type="radio" id="bneiBrak" name="city" value="בני ברק והסביבה">
+                    <label for="bneiBrak">בני ברק והסביבה</label><br>
+                    <input type="radio" id="jerusalem" name="city" value="ירושלים">
+                    <label for="jerusalem">ירושלים</label><br>
+                    <input type="radio" id="haifa" name="city" value="חיפה והקריות">
+                    <label for="haifa">חיפה והקריות</label><br>
+                    <input type="radio" id="south" name="city" value="דרום">
+                    <label for="south">דרום</label><br>
+                    <input type="radio" id="north" name="city" value="צפון">
+                    <label for="north">צפון</label><br>
+                </div>                
+            </div>
+            <button type="submit" class="sort_button" onclick="SortByCity(); return false">מיין</button>
+            <div class="rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <button type="submit" class="sort_button" onclick="SortByFeedback(); return false">מיין</button>
+            <button type="submit" class="sort_button" onclick="clearPage(); return false">נקה חיפוש</button>
+        </div>            
+        <div class="dress-container">            
+        </div>
+        
+    </main>
+    <div class="pages_move">
+        <button id="goBack" onclick="goBack()">הקודם</button>
+        <button id="loadMore" onclick="loadMoreDresses()">הבא</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/allProject.js"></script>
+    <script src="../js/myDress.js"></script>
+    <link rel="stylesheet" href="../css/allProject.css">
+    <link rel="stylesheet" href="../css/myDress.css">
+    <title>השמלות שלי</title>
+</head>
+<body dir="rtl" onload="onload_getDress()">
+    <header>
+        <div>
+            <nav>
+                <a href="../html/home.html">דף הבית</a>
+                <a href="../html/about.html">אודות</a>
+                <a href="../html/login.html" class="active">התחברות</a>
+                <a href="../html/addDress.html">פרסום שמלה</a>
+            </nav>
+            <div class="wellcome">
+                <div id="userName"></div>
+                <button type="submit" onclick="logout(); return false" id="logout">התנתקות</button>
+                <button type="submit" onclick="updateUser(); return false" id="updateUser">עדכון פרטים</button>
+                <button type="submit" onclick="myDress(); return false" id="myDress">השמלות שלי</button>
+                <button type="submit" onclick="getAllUsers(); return false" id="getAllUsers">משתמשים באתר</button>
+            </div>
+        </div>
+        <div class="title">Evening Dress Rental</div>
+    </header>
+    <main>
+
+    </main>       
+</body>
+</html>
