@@ -1,0 +1,14 @@
+
+# Mark both client and server code as relevant for language statistics
+client/* linguist-detectable=true
+server/* linguist-detectable=true
+
+# Explicitly mark JavaScript and JSON files
+*.js linguist-language=JavaScript
+*.json linguist-language=JSON
+
+# Backend entry point
+server/express.js linguist-language=JavaScript
+
+# Ensure this file is treated as UTF-8
+.gitattributes text
